@@ -1,0 +1,199 @@
+{
+  "title": "防涝成效区间与组合拨款",
+  "source_note": "本文件中的机构、事件、规则和数值均为人工构造的本地合成资料。",
+  "contract": "gauges 的雨强档预先检查，无需从气象站推算。inspection 的 flooded 为 0 或 1，空值代表巡测中断。scope 的 active_from 是工程实际投入日期。联合证据按 site、package_set、band 归档，只有列出的完整工程集合投运才适用。claim 金额单位万元，agreement 为已签账，budget 设当期总额和优先街区最少覆盖积水点数。",
+  "tables": {
+    "gauges": [
+      {
+        "storm": "E1",
+        "district": "north",
+        "date": "2025-06-07",
+        "band": "moderate"
+      },
+      {
+        "storm": "E2",
+        "district": "north",
+        "date": "2026-06-08",
+        "band": "moderate"
+      },
+      {
+        "storm": "E1",
+        "district": "south",
+        "date": "2025-06-07",
+        "band": "moderate"
+      },
+      {
+        "storm": "E2",
+        "district": "south",
+        "date": "2026-06-08",
+        "band": "moderate"
+      },
+      {
+        "storm": "E3",
+        "district": "north",
+        "date": "2026-06-19",
+        "band": "heavy"
+      }
+    ],
+    "inspection": [
+      {
+        "storm": "E1",
+        "district": "north",
+        "site": "N1",
+        "flooded": "1"
+      },
+      {
+        "storm": "E1",
+        "district": "north",
+        "site": "N2",
+        "flooded": "1"
+      },
+      {
+        "storm": "E2",
+        "district": "north",
+        "site": "N1",
+        "flooded": "0"
+      },
+      {
+        "storm": "E2",
+        "district": "north",
+        "site": "N2",
+        "flooded": "1"
+      },
+      {
+        "storm": "E1",
+        "district": "south",
+        "site": "S1",
+        "flooded": "1"
+      },
+      {
+        "storm": "E2",
+        "district": "south",
+        "site": "S1",
+        "flooded": "0"
+      },
+      {
+        "storm": "E3",
+        "district": "north",
+        "site": "N1",
+        "flooded": "~"
+      }
+    ],
+    "scope": [
+      {
+        "package": "A",
+        "district": "north",
+        "site": "N1",
+        "active_from": "2026-01-15"
+      },
+      {
+        "package": "B",
+        "district": "north",
+        "site": "N1",
+        "active_from": "2026-03-01"
+      },
+      {
+        "package": "C",
+        "district": "north",
+        "site": "N2",
+        "active_from": "~"
+      },
+      {
+        "package": "C",
+        "district": "south",
+        "site": "S1",
+        "active_from": "~"
+      },
+      {
+        "package": "D",
+        "district": "south",
+        "site": "S1",
+        "active_from": "~"
+      }
+    ],
+    "claim": [
+      {
+        "application": "X1",
+        "package": "A",
+        "stage": "2",
+        "eligible_invoice": "28",
+        "requested": "18"
+      },
+      {
+        "application": "X2",
+        "package": "B",
+        "stage": "1",
+        "eligible_invoice": "23",
+        "requested": "23"
+      },
+      {
+        "application": "X3",
+        "package": "C",
+        "stage": "1",
+        "eligible_invoice": "35",
+        "requested": "35"
+      },
+      {
+        "application": "X4",
+        "package": "D",
+        "stage": "1",
+        "eligible_invoice": "20",
+        "requested": "20"
+      }
+    ],
+    "joint_evidence": [
+      {
+        "site": "N1",
+        "package_set": "A",
+        "band": "moderate",
+        "interval_low": "0.06",
+        "interval_high": "0.21"
+      },
+      {
+        "site": "N1",
+        "package_set": "A+B",
+        "band": "moderate",
+        "interval_low": "0.08",
+        "interval_high": "0.24"
+      },
+      {
+        "site": "N2",
+        "package_set": "C",
+        "band": "moderate",
+        "interval_low": "0.03",
+        "interval_high": "0.12"
+      },
+      {
+        "site": "S1",
+        "package_set": "C",
+        "band": "moderate",
+        "interval_low": "0.03",
+        "interval_high": "0.09"
+      },
+      {
+        "site": "S1",
+        "package_set": "D",
+        "band": "moderate",
+        "interval_low": "0.01",
+        "interval_high": "0.08"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "Y1",
+        "package": "A",
+        "stage": "1",
+        "paid": "10",
+        "committed": "15"
+      }
+    ],
+    "budget": [
+      {
+        "period": "2026H2",
+        "total": "52",
+        "priority_district": "south",
+        "minimum_sites": "1"
+      }
+    ]
+  }
+}
